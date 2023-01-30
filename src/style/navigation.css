@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    box-shadow: 0 0px 10px -5px;
+}
+
+.navbar-link {
+    display: flex;
+}
+
+.navbar-link li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.navbar-link li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sans-serif;
+}

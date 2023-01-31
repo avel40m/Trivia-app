@@ -1,14 +1,17 @@
 import React, { useContext } from 'react'
 import{ useForm } from 'react-hook-form';
 import { UserContext } from '../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {register,handleSubmit,formState:{errors}} = useForm();
     const { setCurrentUser } = useContext(UserContext);
-    
+    const navigate = useNavigate();
+
     const onSubmit = (data) => {
         localStorage.setItem('usuario', JSON.stringify(data));
         setCurrentUser(data);
+        navigate('/jugar');
     }
 
   return (

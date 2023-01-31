@@ -1,13 +1,18 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 import "../style/navigation.css";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  const { setCurrentUser } = useContext(UserContext);
 
   const logout = () => {
     localStorage.removeItem("usuario");
+    setCurrentUser(null);
+    navigate('/login');
   };
   console.log(currentUser);
   return (
@@ -27,7 +32,7 @@ const Navigation = () => {
           </li>
         ) : (
           <li>
-            <a href="#">Jugar</a>
+            <Link to="/jugar">Jugar</Link>
           </li>
         )}
       </ul>

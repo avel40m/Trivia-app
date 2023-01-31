@@ -3,13 +3,15 @@ import { useForm } from 'react-hook-form';
 import { dificultad } from '../array/dificultad';
 import { categoria } from '../array/categoria';
 import { numero } from '../array/numero';
-import { gameLink } from '../function/gameLink';
+import { useNavigate } from 'react-router-dom';
 
 const Jugar = () => {
     const {register,handleSubmit,formState:{errors}} = useForm();
+    const navigate = useNavigate();
 
-    const onSubmit = data => {
-        gameLink(data);
+    const onSubmit = async data => {
+         localStorage.setItem('question', JSON.stringify(data));       
+         navigate('/question')
     }
   return (
     <div className='container mt10'>

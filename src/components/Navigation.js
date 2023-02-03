@@ -14,7 +14,7 @@ const Navigation = () => {
     setCurrentUser(null);
     navigate('/login');
   };
-  console.log(currentUser);
+  
   return (
     <nav className="navbar">
       <div className="navbar-logo">

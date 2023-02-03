@@ -5,6 +5,7 @@ import Jugar from './components/Jugar';
 import Login from './components/Login';
 import Navigation from './components/Navigation';
 import Question from './components/Question';
+import ResultsFinal from './components/ResultsFinal';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/jugar' element={<Jugar />} />
         <Route path='/question' element={<Question />} />
+        <Route path='/results-final' element={<ResultsFinal />} />
       </Routes>
     </>
   );

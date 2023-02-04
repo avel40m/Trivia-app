@@ -2,7 +2,7 @@
     "name": "trabajo-recuperatorio",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://github.com/avel40m/Trivia-app",
+    "homepage": "https://avel40m.github.io/react-gh-pages",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
@@ -20,7 +20,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build -r https://$GH_TOKENgithub.com/avel40m/Trivia-app"
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

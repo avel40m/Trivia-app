@@ -16,7 +16,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-white border-gray-200 dark:bg-gray-900 shadow shadow-blue-500/40">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <Link to="/" className="flex items-center">
           <img
@@ -30,12 +30,6 @@ const Navigation = () => {
         </Link>
         {currentUser == null ? (
           <div className="flex items-center">
-            <Link
-              to="/"
-              className="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline"
-            >
-              Home
-            </Link>
             <Link
               to="/login"
               className="mr-6 text-sm font-medium text-blue-500 dark:text-blue hover:underline"

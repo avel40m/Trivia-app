@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { gameLink } from "../function/gameLink";
 import { useNavigate } from "react-router-dom";
@@ -76,7 +76,6 @@ const Question = () => {
             <p className="underline text-2xl mb-5">
               Dificultad: {array.difficulty}
             </p>
-            <p className="underline text-2xl mb-5">Tiempo: 10:02:17</p>
           </div>
           <div className="grid grid-cols-1 mt-5 text-center">
             <p className="text-2xl lg:text-4xl md:text-3xl mt-5">{array.question}</p>

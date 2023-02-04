@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
 import Jugar from './components/Jugar';
 import Login from './components/Login';
 import Navigation from './components/Navigation';
@@ -12,8 +11,7 @@ function App() {
     <>
       <Navigation />
       <Routes>
-        <Route index path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
+        <Route index path='/login' element={<Login />} />
         <Route path='/jugar' element={<Jugar />} />
         <Route path='/question' element={<Question />} />
         <Route path='/results-final' element={<ResultsFinal />} />

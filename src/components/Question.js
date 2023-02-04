@@ -66,30 +66,26 @@ const Question = () => {
   }
 
   return (
-    <div className="container">
-      <div className="card">
-        <div className="card-header">
-          <h1>Question: {contador + 1}</h1>
-        </div>
-        <div className="card-container">
-          <div className="card-col">
-            <h1 className="title">{usuario.username}</h1>
-            <p className="card-button m20 bc-orange">
+     <div className="container grid grid-cols-2">
+        <div className="grid grid-cols-1 mt-5 text-center">
+          <h1 className="text-3xl font-bold underline mb-5">Question: {contador + 1}</h1>
+            <p className="underline text-2xl mb-5">Jugador: {usuario.username}</p>
+            <p className="underline text-2xl mb-5">
               Categoria: {array.category}
             </p>
-            <p className="card-button m20 bc-orange">
+            <p className="underline text-2xl mb-5">
               Dificultad: {array.difficulty}
             </p>
-            <p className="card-button m20 bc-orange">Tiempo: 10:02:17</p>
+            <p className="underline text-2xl mb-5">Tiempo: 10:02:17</p>
           </div>
-          <div className="card-col p-question">
-            <p className="title-question">{array.question}</p>
+          <div className="grid grid-cols-1 mt-5 text-center">
+            <p className="text-2xl lg:text-4xl md:text-3xl mt-5">{array.question}</p>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-group pt10">
-                <select name="" id="" className="form-input"
+              <div className="grid grid-rows-3 grid-flow-col w-72 m-auto mt-5">
+                <select name="" id="" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 {
                   ...register('response',{
-                    required:'El campo es requerido'
+                    required:'Seleccionar opción'
                   })
                 }>
                   {
@@ -99,16 +95,18 @@ const Question = () => {
                     ))
                   }
                 </select>
-                <p className="input-error">{errors.response?.message}</p>
+                <p className="mt-2 text-sm text-red-600 dark:text-red-500">{errors.response?.message}</p>
               </div>
-              <div className="form-group pt10">
-                <button className="button-question">Continuar</button>
-              </div>
+              <div className="container m-auto text-center">
+          <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+            <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Continuar
+            </span>
+          </button>
+        </div>
             </form>
           </div>
         </div>
-      </div>
-    </div>
   );
 };
 

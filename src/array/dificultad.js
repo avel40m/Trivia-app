@@ -1,3 +1,3 @@
 export const dificultad = [
-    'easy','medium','hard'
+    '','easy','medium','hard'
 ]

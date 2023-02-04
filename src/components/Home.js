@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Home = () => {
   return (
-    <div className='container'>
-      <h1 className='text-center ml10'>Bienvenido al mejor juego Trivia</h1>
+    <div className="container mx-auto text-center mt-5">
+      <h1 className="text-3xl font-bold underline">
+        Bienvenido al mejor juego Trivia
+      </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

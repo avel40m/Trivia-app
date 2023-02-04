@@ -12,43 +12,55 @@ const Navigation = () => {
   const logout = () => {
     localStorage.removeItem("usuario");
     setCurrentUser(null);
-    navigate('/login');
+    navigate("/login");
   };
-  
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <img
-          src="http://cdn.onlinewebfonts.com/svg/img_238906.png"
-          alt="trivia"
-          width={30}
-          height={30}
-        />
-      </div>
-      <ul className="navbar-link">
-        {currentUser === null ? (
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+        <Link to="/" className="flex items-center">
+          <img
+            src="http://cdn.onlinewebfonts.com/svg/img_238906.png"
+            className="h-6 mr-3 sm:h-9"
+            alt="Flowbite Logo"
+          />
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            Quizz APP
+          </span>
+        </Link>
+        {currentUser == null ? (
+          <div className="flex items-center">
+            <Link
+              to="/"
+              className="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline"
+            >
+              Home
+            </Link>
+            <Link
+              to="/login"
+              className="mr-6 text-sm font-medium text-blue-500 dark:text-blue hover:underline"
+            >
+              Login
+            </Link>
+          </div>
         ) : (
-          <li>
-            <Link to="/jugar">Jugar</Link>
-          </li>
-        )}
-      </ul>
-      <ul className="navbar-link">
-        {currentUser === null ? (
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-        ) : (
-          <li>
-            <button className="button-logout" onClick={logout}>
+          <div className="flex items-center">
+            <Link
+              to="/jugar"
+              className="mr-6 text-sm font-medium text-gray-500 dark:text-white hover:underline"
+            >
+              Jugar
+            </Link>
+            <button
+              onClick={logout}
+              to="/login"
+              className="mr-6 text-sm font-medium text-red-500 dark:text-red hover:underline"
+            >
               Logout
             </button>
-          </li>
+          </div>
         )}
-      </ul>
+      </div>
     </nav>
   );
 };
